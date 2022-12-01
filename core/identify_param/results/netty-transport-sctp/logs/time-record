@@ -1,0 +1,3 @@
+io.netty.channel.sctp.SctpLimitStreamsTest#testSctpInitMaxstreams 3.8263909816741943
+io.netty.handler.codec.sctp.NativeImageHandlerMetadataTest#collectAndCompareMetadata 4.31008505821228
+io.netty.handler.codec.sctp.SctpMessageCompletionHandlerTest#testFragmentsReleased 4.368218898773193

@@ -1,0 +1,3 @@
+["io.netty.channel.sctp.SctpLimitStreamsTest#testSctpInitMaxstreams",
+"io.netty.handler.codec.sctp.NativeImageHandlerMetadataTest#collectAndCompareMetadata",
+"io.netty.handler.codec.sctp.SctpMessageCompletionHandlerTest#testFragmentsReleased"]
