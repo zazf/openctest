@@ -50,8 +50,10 @@ function setup_alluxio() {
 function setup_netty_sctp() {
     [ ! -d "app/ctest-netty-sctp" ] && git clone https://github.com/HongxuMeng/netty.git app/ctest-netty-sctp
     cd app/ctest-netty-sctp
-    # git fetch && git checkout ctest-logging
+    git fetch && git checkout ctest-logging
     home_dir=$PWD
+    cd $home_dir/transport
+    mvn clean install -DskipTests
     cd $home_dir/transport-sctp
     mvn clean install -DskipTests
 }
@@ -73,7 +75,7 @@ function main() {
             zookeeper) setup_zookeeper ;;
             alluxio) setup_alluxio ;;
             netty-sctp) setup_netty_sctp ;;
-            *) echo "Unexpected project: $project - only support hadoop, hbase, zookeeper and alluxio." ;;
+            *) echo "Unexpected project: $project - only support hadoop, hbase, zookeeper, netty-sctp and alluxio." ;;
         esac
     fi
 }
